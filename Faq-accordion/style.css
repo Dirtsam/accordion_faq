@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pr-f-color: #0e1c4e;
+
+  /* border-color */
+  --b1-color: #ffc48b;
+  --b2-color: #b4b3ff;
+  --b3-color: #ffb3c0;
+
+  --bg1-color: #fff6ee;
+  --bg2-color: #fafaff;
+  --bg3-color: #fff0f3;
+
+  /* icon color */
+  --icon-color: #202842;
+
+  --body-color: #fffcf4;
+}
+
+/* Reusable code */
+h1,
+h2,
+h3,
+p {
+  font-family: "Poppins", sans-serif;
+  color: var(--pr-f-color);
+}
+
+h3,
+p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+/* h2 main heading */
+.hero-title {
+  font-size: 1.375rem;
+  margin: 1.25rem 1.375rem;
+  max-width: 355px;
+}
+
+.b-left-1 {
+  border-left: 5px solid var(--b1-color);
+  background: var(--bg1-color);
+}
+.b-left-2 {
+  border-left: 5px solid var(--b2-color);
+  background: var(--bg2-color);
+}
+.b-left-3 {
+  border-left: 5px solid var(--b3-color);
+  background: var(--bg3-color);
+}
+
+/* accordion title h3.faq__h3 */
+.faq__h3 {
+  margin-left: 0.625rem; /*10px*/
+}
+
+/* this's a p tag inside content div */
+.description {
+  margin-left: 1.875rem;
+}
+
+body {
+  background: var(--body-color);
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 60px;
+}
+
+/* container */
+.accordion {
+  width: 90%;
+  max-width: 540px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.1);
+  /* margin-top: 120px; */
+}
+
+/* this div inside container */
+.accordion-items {
+  margin: 1.5rem;
+  border-radius: 5px;
+  /* padding-bottom: 20px; */
+  padding: 1.5rem 1.25rem;
+  cursor: pointer;
+}
+
+/* header class */
+.accordion__header {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/*div inside of header tag */
+.accordion__toggle {
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+
+.accordion__content {
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.3s ease;
+}
+
+.accordion__content > p + p {
+  margin-top: 20px;
+}
+
+.accordion__toggle.active {
+  transform: rotate(45deg);
+}
+
+.faq__h3.active {
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+
+@media (max-width: 390px) {
+  .accordion {
+    margin-top: 120px;
+  }
+} ;
